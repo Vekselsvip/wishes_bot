@@ -10,7 +10,6 @@ bot = telebot.TeleBot(TOKEN)
 
 with open('wishes.txt', encoding='utf-8') as file:
     wishes = [item.split('\n') for item in file]
-sti = open('stick/sticker.webp', 'rb')
 
 
 @bot.message_handler(commands='start')
@@ -22,7 +21,7 @@ def start_message(message):
 def sleep_message(message):
     for i in wishes:
         bot.send_message(message.chat.id, f'<i>{i[0]}</i>', parse_mode='HTML')
-        bot.send_sticker(message.chat.id, sti)
+        bot.send_sticker(message.chat.id, 'CAACAgIAAxkBAAEDZHFhpmcQOmftRJ0PRY3cXjlq3YbQ3QAChA8AAnsMOEnOgn5-CS2ltCIE')
         time.sleep(3)
 
 
