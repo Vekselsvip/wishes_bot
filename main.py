@@ -9,7 +9,8 @@ app = Flask(__name__)
 bot = telebot.TeleBot(TOKEN)
 
 with open('wishes.txt', encoding='utf-8') as file:
-    wishes = [item.split('\n') for item in file] \
+    wishes = [item.split('\n') for item in file]
+sti = open('stick/welcome.tgs', 'rb')
 
 
 
@@ -22,6 +23,7 @@ def start_message(message):
 def sleep_message(message):
     for i in wishes:
         bot.send_message(message.chat.id, f'<i>{i[0]}</i>', parse_mode='HTML')
+        bot.send_sticker(message.chat.id, sti)
         time.sleep(3)
 
 
