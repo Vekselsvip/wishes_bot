@@ -3,7 +3,6 @@ from config import *
 import time
 from flask import Flask, request
 import os
-import random
 
 
 app = Flask(__name__)
@@ -22,8 +21,8 @@ def start_message(message):
 def sleep_message(message):
     for i in wishes:
         bot.send_message(message.chat.id, f'<i>{i[0]}</i>', parse_mode='HTML')
-        bot.send_sticker(message.chat.id, STI[random.randint(0, 5)])
-        time.sleep(3)
+        bot.send_sticker(message.chat.id, STI)
+        time.sleep(10)
 
 
 @app.route('/' + TOKEN, methods=['POST'])
