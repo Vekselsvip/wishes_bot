@@ -22,7 +22,7 @@ def sleep_message(message):
     for i in wishes:
         bot.send_message(message.chat.id, f'<i>{i[0]}</i>', parse_mode='HTML')
         bot.send_sticker(message.chat.id, STI)
-        time.sleep(10)
+        time.sleep(86400)
 
 
 @app.route('/' + TOKEN, methods=['POST'])
