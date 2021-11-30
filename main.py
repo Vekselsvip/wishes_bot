@@ -21,7 +21,7 @@ def start_message(message):
 @bot.message_handler(commands='sleep')
 def sleep_message(message):
     for i in wishes:
-        bot.send_message(message.chat.id, f'<i>i[0]</i>', parse_mode='HTML')
+        bot.send_message(message.chat.id, f'<i>{i[0]}</i>', parse_mode='HTML')
         time.sleep(3)
 
 
