@@ -10,7 +10,7 @@ bot = telebot.TeleBot(TOKEN)
 
 with open('wishes.txt', encoding='utf-8') as file:
     wishes = [item.split('\n') for item in file]
-sti = open('stick/welcome.tgs', 'rb')
+sti = open('stick/sticker.webp', 'rb')
 
 
 
